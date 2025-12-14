@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, asdict
-from typing import Any, Dict, List, Optional, Sequence
+from typing import Any, Dict, List, Optional
 
 import pandas as pd
 from pandas.api import types as ptypes
@@ -41,17 +41,11 @@ class DatasetSummary:
 
 
 def summarize_dataset(
-    df: pd.DataFrame,
-    example_values_per_column: int = 3,
+        df: pd.DataFrame,
+        example_values_per_column: int = 3,
 ) -> DatasetSummary:
     """
-    Полный обзор датасета по колонкам:
-    - количество строк/столбцов;
-    - типы;
-    - пропуски;
-    - количество уникальных;
-    - несколько примерных значений;
-    - базовые числовые статистики (для numeric).
+    Полный обзор датасета по колонкам.
     """
     n_rows, n_cols = df.shape
     columns: List[ColumnSummary] = []
@@ -65,7 +59,7 @@ def summarize_dataset(
         missing_share = float(missing / n_rows) if n_rows > 0 else 0.0
         unique = int(s.nunique(dropna=True))
 
-        # Примерные значения выводим как строки
+        # Примерные значения
         examples = (
             s.dropna().astype(str).unique()[:example_values_per_column].tolist()
             if non_null > 0
@@ -122,6 +116,7 @@ def missing_table(df: pd.DataFrame) -> pd.DataFrame:
         )
         .sort_values("missing_share", ascending=False)
     )
+    # Оставляем только те, где есть пропуски, или всё, если нужно
     return result
 
 
@@ -136,13 +131,12 @@ def correlation_matrix(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def top_categories(
-    df: pd.DataFrame,
-    max_columns: int = 5,
-    top_k: int = 5,
+        df: pd.DataFrame,
+        max_columns: int = 5,
+        top_k: int = 5,
 ) -> Dict[str, pd.DataFrame]:
     """
     Для категориальных/строковых колонок считает top-k значений.
-    Возвращает словарь: колонка -> DataFrame со столбцами value/count/share.
     """
     result: Dict[str, pd.DataFrame] = {}
     candidate_cols: List[str] = []
@@ -170,28 +164,61 @@ def top_categories(
     return result
 
 
-def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame) -> Dict[str, Any]:
+def compute_quality_flags(
+        summary: DatasetSummary,
+        missing_df: pd.DataFrame,
+        min_missing_threshold: float = 0.5
+) -> Dict[str, Any]:
     """
-    Простейшие эвристики «качества» данных:
-    - слишком много пропусков;
-    - подозрительно мало строк;
-    и т.п.
+    Эвристики качества данных.
+    Добавлены:
+    - has_constant_columns: есть ли колонки с 1 уникальным значением.
+    - has_high_cardinality: есть ли строковые колонки с > 50 уник. значениями.
     """
     flags: Dict[str, Any] = {}
+
+    # 1. Базовые проверки размера
     flags["too_few_rows"] = summary.n_rows < 100
     flags["too_many_columns"] = summary.n_cols > 100
 
+    # 2. Пропуски
     max_missing_share = float(missing_df["missing_share"].max()) if not missing_df.empty else 0.0
     flags["max_missing_share"] = max_missing_share
-    flags["too_many_missing"] = max_missing_share > 0.5
+    flags["too_many_missing"] = max_missing_share > min_missing_threshold
 
-    # Простейший «скор» качества
+    # 3. Новая эвристика: Константные колонки
+    # Если unique <= 1, значит все значения одинаковые (или колонка пустая + 1 значение)
+    constant_cols = [c.name for c in summary.columns if c.unique <= 1]
+    flags["has_constant_columns"] = len(constant_cols) > 0
+    flags["constant_columns_list"] = constant_cols
+
+    # 4. Новая эвристика: Высокая кардинальность категорий
+    # (потенциально это ID или "грязные" данные)
+    high_card_threshold = 50
+    high_card_cols = [
+        c.name for c in summary.columns
+        if (not c.is_numeric) and (c.unique > high_card_threshold)
+    ]
+    flags["has_high_cardinality"] = len(high_card_cols) > 0
+    flags["high_cardinality_list"] = high_card_cols
+
+    # Расчет скора
     score = 1.0
-    score -= max_missing_share  # чем больше пропусков, тем хуже
+
+    # Штраф за пропуски
+    score -= max_missing_share * 0.5
+
+    # Штраф за размеры
     if summary.n_rows < 100:
-        score -= 0.2
+        score -= 0.1
     if summary.n_cols > 100:
         score -= 0.1
+
+    # Штраф за новые эвристики
+    if flags["has_constant_columns"]:
+        score -= 0.1
+    if flags["has_high_cardinality"]:
+        score -= 0.1  # Небольшой штраф, т.к. иногда это нормально (ID)
 
     score = max(0.0, min(1.0, score))
     flags["quality_score"] = score
@@ -201,7 +228,7 @@ def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame) -> 
 
 def flatten_summary_for_print(summary: DatasetSummary) -> pd.DataFrame:
     """
-    Превращает DatasetSummary в табличку для более удобного вывода.
+    Превращает DatasetSummary в табличку для вывода.
     """
     rows: List[Dict[str, Any]] = []
     for col in summary.columns:

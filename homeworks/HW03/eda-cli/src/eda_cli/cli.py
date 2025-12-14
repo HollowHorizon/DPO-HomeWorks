@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Optional
 
 import pandas as pd
 import typer
@@ -26,9 +25,9 @@ app = typer.Typer(help="Мини-CLI для EDA CSV-файлов")
 
 
 def _load_csv(
-    path: Path,
-    sep: str = ",",
-    encoding: str = "utf-8",
+        path: Path,
+        sep: str = ",",
+        encoding: str = "utf-8",
 ) -> pd.DataFrame:
     if not path.exists():
         raise typer.BadParameter(f"Файл '{path}' не найден")
@@ -40,15 +39,12 @@ def _load_csv(
 
 @app.command()
 def overview(
-    path: str = typer.Argument(..., help="Путь к CSV-файлу."),
-    sep: str = typer.Option(",", help="Разделитель в CSV."),
-    encoding: str = typer.Option("utf-8", help="Кодировка файла."),
+        path: str = typer.Argument(..., help="Путь к CSV-файлу."),
+        sep: str = typer.Option(",", help="Разделитель в CSV."),
+        encoding: str = typer.Option("utf-8", help="Кодировка файла."),
 ) -> None:
     """
-    Напечатать краткий обзор датасета:
-    - размеры;
-    - типы;
-    - простая табличка по колонкам.
+    Напечатать краткий обзор датасета.
     """
     df = _load_csv(Path(path), sep=sep, encoding=encoding)
     summary: DatasetSummary = summarize_dataset(df)
@@ -62,19 +58,17 @@ def overview(
 
 @app.command()
 def report(
-    path: str = typer.Argument(..., help="Путь к CSV-файлу."),
-    out_dir: str = typer.Option("reports", help="Каталог для отчёта."),
-    sep: str = typer.Option(",", help="Разделитель в CSV."),
-    encoding: str = typer.Option("utf-8", help="Кодировка файла."),
-    max_hist_columns: int = typer.Option(6, help="Максимум числовых колонок для гистограмм."),
+        path: str = typer.Argument(..., help="Путь к CSV-файлу."),
+        out_dir: str = typer.Option("reports", help="Каталог для отчёта."),
+        sep: str = typer.Option(",", help="Разделитель в CSV."),
+        encoding: str = typer.Option("utf-8", help="Кодировка файла."),
+        # --- Новые параметры ---
+        max_hist_columns: int = typer.Option(6, help="Максимум числовых колонок для гистограмм."),
+        top_k_categories: int = typer.Option(5, help="Сколько топ-значений выводить для категорий."),
+        min_missing_share: float = typer.Option(0.5, help="Порог пропусков (0..1) для флага 'too_many_missing'."),
 ) -> None:
     """
-    Сгенерировать полный EDA-отчёт:
-    - текстовый overview и summary по колонкам (CSV/Markdown);
-    - статистика пропусков;
-    - корреляционная матрица;
-    - top-k категорий по категориальным признакам;
-    - картинки: гистограммы, матрица пропусков, heatmap корреляции.
+    Сгенерировать полный EDA-отчёт с учетом переданных параметров.
     """
     out_root = Path(out_dir)
     out_root.mkdir(parents=True, exist_ok=True)
@@ -86,10 +80,13 @@ def report(
     summary_df = flatten_summary_for_print(summary)
     missing_df = missing_table(df)
     corr_df = correlation_matrix(df)
-    top_cats = top_categories(df)
+
+    # Используем новый параметр top_k_categories
+    top_cats = top_categories(df, top_k=top_k_categories)
 
     # 2. Качество в целом
-    quality_flags = compute_quality_flags(summary, missing_df)
+    # Передаем порог пропусков
+    quality_flags = compute_quality_flags(summary, missing_df, min_missing_threshold=min_missing_share)
 
     # 3. Сохраняем табличные артефакты
     summary_df.to_csv(out_root / "summary.csv", index=False)
@@ -107,11 +104,18 @@ def report(
         f.write(f"Строк: **{summary.n_rows}**, столбцов: **{summary.n_cols}**\n\n")
 
         f.write("## Качество данных (эвристики)\n\n")
-        f.write(f"- Оценка качества: **{quality_flags['quality_score']:.2f}**\n")
-        f.write(f"- Макс. доля пропусков по колонке: **{quality_flags['max_missing_share']:.2%}**\n")
-        f.write(f"- Слишком мало строк: **{quality_flags['too_few_rows']}**\n")
-        f.write(f"- Слишком много колонок: **{quality_flags['too_many_columns']}**\n")
-        f.write(f"- Слишком много пропусков: **{quality_flags['too_many_missing']}**\n\n")
+        f.write(f"- **Итоговая оценка (Quality Score): {quality_flags['quality_score']:.2f}**\n")
+        f.write(f"- Макс. доля пропусков: **{quality_flags['max_missing_share']:.2%}**\n")
+
+        # Вывод статуса новых флагов
+        f.write(f"- Слишком много пропусков (>{min_missing_share:.0%}): **{quality_flags['too_many_missing']}**\n")
+        f.write(f"- Константные колонки: **{quality_flags['has_constant_columns']}**\n")
+        if quality_flags['has_constant_columns']:
+            f.write(f"  - Список: {quality_flags['constant_columns_list']}\n")
+
+        f.write(f"- Высокая кардинальность категорий: **{quality_flags['has_high_cardinality']}**\n")
+        if quality_flags['has_high_cardinality']:
+            f.write(f"  - Список: {quality_flags['high_cardinality_list']}\n")
 
         f.write("## Колонки\n\n")
         f.write("См. файл `summary.csv`.\n\n")
@@ -128,7 +132,7 @@ def report(
         else:
             f.write("См. `correlation.csv` и `correlation_heatmap.png`.\n\n")
 
-        f.write("## Категориальные признаки\n\n")
+        f.write(f"## Топ-{top_k_categories} значений категориальных признаков\n\n")
         if not top_cats:
             f.write("Категориальные/строковые признаки не найдены.\n\n")
         else:
