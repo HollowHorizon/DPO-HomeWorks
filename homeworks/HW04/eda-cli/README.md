@@ -22,6 +22,26 @@ uv sync
 - установит зависимости из `pyproject.toml`;
 - установит сам проект `eda-cli` в окружение.
 
+## HTTP API
+
+Сервис запущен на FastAPI.
+
+### Запуск
+```bash
+uv run uvicorn eda_cli.api:app --reload --port 8000
+```
+
+### Эндпоинты
+- `GET /health` - Статус сервиса.
+- `POST /quality-from-csv` - Базовая оценка качества по CSV.
+- `POST /quality-flags-from-csv` - Полный список флагов из HW03.
+
+### Пример запроса к новому эндпоинту:
+```bash
+curl -X POST -F "file=@data/example.csv" http://127.0.0.1:8000/quality-flags-from-csv
+```
+
+
 ## Запуск CLI
 
 ### Краткий обзор
