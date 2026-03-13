@@ -1,0 +1,8 @@
+experiment_id,dataset,seed,model_summary,optimizer,lr,momentum,weight_decay,epochs_trained,best_val_accuracy,best_val_loss,test_accuracy,test_loss
+E1,CIFAR10,42,"hidden=[256, 128], dropout=0.0, batch_norm=False",ADAM,0.001,0.0,0.0,5,0.4951,1.445105274581909,0.497,1.432046048927307
+E2,CIFAR10,42,"hidden=[256, 128], dropout=0.3, batch_norm=False",ADAM,0.001,0.0,0.0,5,0.4906,1.459597107887268,0.4913,1.4523860630035401
+E3,CIFAR10,42,"hidden=[256, 128], dropout=0.0, batch_norm=True",ADAM,0.001,0.0,0.0,5,0.5164,1.3760924417495728,0.5088,1.374264538383484
+E4,CIFAR10,42,"hidden=[256, 128], dropout=0.0, batch_norm=True",ADAM,0.001,0.0,0.0,8,0.5302,1.350314744949341,0.5274,1.3433567155838013
+O1,CIFAR10,42,"hidden=[256, 128], dropout=0.3, batch_norm=False",ADAM,0.1,0.0,0.0,5,0.1024,2.3028285335540772,0.1,2.303001036453247
+O2,CIFAR10,42,"hidden=[256, 128], dropout=0.3, batch_norm=False",ADAM,1e-05,0.0,0.0,5,0.285,2.11273193359375,0.2837,2.1083759433746336
+O3,CIFAR10,42,"hidden=[256, 128], dropout=0.3, batch_norm=False",SGD,0.01,0.9,0.0001,6,0.4087,1.6822934112548829,0.4102,1.6722830123901367

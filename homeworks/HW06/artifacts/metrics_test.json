@@ -1,0 +1,37 @@
+[
+  {
+    "model":"HistGradientBoostingClassifier",
+    "accuracy":0.9033333333,
+    "f1":0.7974388824,
+    "roc_auc":0.9307282855,
+    "cv_roc_auc":0.9271686747
+  },
+  {
+    "model":"RandomForestClassifier",
+    "accuracy":0.8908333333,
+    "f1":0.7578558226,
+    "roc_auc":0.9280720214,
+    "cv_roc_auc":0.9267358301
+  },
+  {
+    "model":"DecisionTreeClassifier",
+    "accuracy":0.7872222222,
+    "f1":0.6561938959,
+    "roc_auc":0.8443400193,
+    "cv_roc_auc":0.8340472187
+  },
+  {
+    "model":"LogisticRegression",
+    "accuracy":0.8119444444,
+    "f1":0.5606748864,
+    "roc_auc":0.7976914876,
+    "cv_roc_auc":null
+  },
+  {
+    "model":"DummyClassifier",
+    "accuracy":0.7375,
+    "f1":0.0,
+    "roc_auc":0.5,
+    "cv_roc_auc":null
+  }
+]

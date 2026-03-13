@@ -1,0 +1,14 @@
+{
+  "seeds": [
+    11,
+    19,
+    27,
+    35,
+    43
+  ],
+  "mean_pairwise_ari": 1.0,
+  "min_pairwise_ari": 1.0,
+  "max_pairwise_ari": 1.0,
+  "silhouette_mean": 0.52164,
+  "silhouette_std": 0.0
+}

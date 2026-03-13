@@ -1,0 +1,71 @@
+{
+  "dataset_a": {
+    "dataset_key": "dataset_a",
+    "algorithm": "KMeans",
+    "params": {
+      "k": 2,
+      "n_init": 20,
+      "random_state": 42
+    },
+    "n_clusters": 2,
+    "noise_share": 0.0,
+    "silhouette": 0.52164,
+    "davies_bouldin": 0.68533,
+    "calinski_harabasz": 11786.954623,
+    "score": 54.685533,
+    "selection_rule": "max(100*silhouette - 10*DB + log1p(CH))",
+    "search_figure": "dataset_a_search.png",
+    "pca_figure": "dataset_a_pca_scatter.png",
+    "labels_file": "labels_hw07_dataset_a.csv",
+    "transformed_shape": [
+      12000,
+      8
+    ]
+  },
+  "dataset_b": {
+    "dataset_key": "dataset_b",
+    "algorithm": "KMeans",
+    "params": {
+      "k": 2,
+      "n_init": 20,
+      "random_state": 42
+    },
+    "n_clusters": 2,
+    "noise_share": 0.0,
+    "silhouette": 0.306861,
+    "davies_bouldin": 1.323472,
+    "calinski_harabasz": 3573.393333,
+    "score": 25.632931,
+    "selection_rule": "max(100*silhouette - 10*DB + log1p(CH))",
+    "search_figure": "dataset_b_search.png",
+    "pca_figure": "dataset_b_pca_scatter.png",
+    "labels_file": "labels_hw07_dataset_b.csv",
+    "transformed_shape": [
+      8000,
+      3
+    ]
+  },
+  "dataset_c": {
+    "dataset_key": "dataset_c",
+    "algorithm": "KMeans",
+    "params": {
+      "k": 5,
+      "n_init": 20,
+      "random_state": 42
+    },
+    "n_clusters": 5,
+    "noise_share": 0.0,
+    "silhouette": 0.447369,
+    "davies_bouldin": 0.975904,
+    "calinski_harabasz": 5087.688517,
+    "score": 43.512635,
+    "selection_rule": "max(100*silhouette - 10*DB + log1p(CH))",
+    "search_figure": "dataset_c_search.png",
+    "pca_figure": "dataset_c_pca_scatter.png",
+    "labels_file": "labels_hw07_dataset_c.csv",
+    "transformed_shape": [
+      10000,
+      42
+    ]
+  }
+}

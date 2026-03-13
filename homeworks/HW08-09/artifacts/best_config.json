@@ -1,0 +1,58 @@
+{
+  "dataset": "CIFAR10",
+  "seed": 42,
+  "device": "cpu",
+  "architecture": {
+    "hidden_sizes": [
+      256,
+      128
+    ],
+    "dropout": 0.0,
+    "batch_norm": true,
+    "activation": "ReLU"
+  },
+  "training": {
+    "optimizer": "adam",
+    "lr": 0.001,
+    "max_epochs": 8,
+    "patience": 3,
+    "batch_size": 1024
+  },
+  "class_names": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "sample_batch_shapes": {
+    "x_shape": [
+      1024,
+      3,
+      32,
+      32
+    ],
+    "y_shape": [
+      1024
+    ],
+    "x_min": -1.0,
+    "x_max": 1.0
+  },
+  "split_sizes": {
+    "train": 40000,
+    "val": 10000,
+    "test": 10000
+  },
+  "metrics": {
+    "best_val_accuracy": 0.5302,
+    "best_val_loss": 1.350314744949341,
+    "test_accuracy": 0.5274,
+    "test_loss": 1.3433567155838013,
+    "best_epoch": 8
+  }
+}

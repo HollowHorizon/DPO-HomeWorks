@@ -1,0 +1,1175 @@
+{
+  "dataset_a": [
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 2,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 2,
+      "noise_share": 0.0,
+      "silhouette": 0.52164,
+      "davies_bouldin": 0.68533,
+      "calinski_harabasz": 11786.954623,
+      "score": 54.685533
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 3,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 3,
+      "noise_share": 0.0,
+      "silhouette": 0.396758,
+      "davies_bouldin": 0.964604,
+      "calinski_harabasz": 10446.638111,
+      "score": 39.283891
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 4,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 4,
+      "noise_share": 0.0,
+      "silhouette": 0.383301,
+      "davies_bouldin": 1.160349,
+      "calinski_harabasz": 9427.499744,
+      "score": 35.878102
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 5,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 5,
+      "noise_share": 0.0,
+      "silhouette": 0.354801,
+      "davies_bouldin": 1.273719,
+      "calinski_harabasz": 8301.205994,
+      "score": 31.767187
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 6,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 6,
+      "noise_share": 0.0,
+      "silhouette": 0.348097,
+      "davies_bouldin": 1.150925,
+      "calinski_harabasz": 7479.989972,
+      "score": 32.22057
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 7,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 7,
+      "noise_share": 0.0,
+      "silhouette": 0.324607,
+      "davies_bouldin": 1.194162,
+      "calinski_harabasz": 6823.007844,
+      "score": 29.347282
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 8,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 8,
+      "noise_share": 0.0,
+      "silhouette": 0.269388,
+      "davies_bouldin": 1.312815,
+      "calinski_harabasz": 6461.42029,
+      "score": 22.584409
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 2,
+        "linkage": "ward"
+      },
+      "n_clusters": 2,
+      "noise_share": 0.0,
+      "silhouette": 0.52164,
+      "davies_bouldin": 0.68533,
+      "calinski_harabasz": 11786.954623,
+      "score": 54.685533
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 3,
+        "linkage": "ward"
+      },
+      "n_clusters": 3,
+      "noise_share": 0.0,
+      "silhouette": 0.396789,
+      "davies_bouldin": 0.96441,
+      "calinski_harabasz": 10446.597694,
+      "score": 39.288927
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 4,
+        "linkage": "ward"
+      },
+      "n_clusters": 4,
+      "noise_share": 0.0,
+      "silhouette": 0.38318,
+      "davies_bouldin": 1.160251,
+      "calinski_harabasz": 9425.768582,
+      "score": 35.866799
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 5,
+        "linkage": "ward"
+      },
+      "n_clusters": 5,
+      "noise_share": 0.0,
+      "silhouette": 0.345864,
+      "davies_bouldin": 1.333936,
+      "calinski_harabasz": 8155.43853,
+      "score": 30.253603
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 6,
+        "linkage": "ward"
+      },
+      "n_clusters": 6,
+      "noise_share": 0.0,
+      "silhouette": 0.331647,
+      "davies_bouldin": 1.224782,
+      "calinski_harabasz": 7189.672314,
+      "score": 29.79742
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 7,
+        "linkage": "ward"
+      },
+      "n_clusters": 7,
+      "noise_share": 0.0,
+      "silhouette": 0.318726,
+      "davies_bouldin": 1.240457,
+      "calinski_harabasz": 6557.751499,
+      "score": 28.256586
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 8,
+        "linkage": "ward"
+      },
+      "n_clusters": 8,
+      "noise_share": 0.0,
+      "silhouette": 0.329886,
+      "davies_bouldin": 1.215727,
+      "calinski_harabasz": 6146.256531,
+      "score": 29.555091
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 2,
+        "linkage": "complete"
+      },
+      "n_clusters": 2,
+      "noise_share": 0.0,
+      "silhouette": 0.52164,
+      "davies_bouldin": 0.68533,
+      "calinski_harabasz": 11786.954623,
+      "score": 54.685533
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 3,
+        "linkage": "complete"
+      },
+      "n_clusters": 3,
+      "noise_share": 0.0,
+      "silhouette": 0.19932,
+      "davies_bouldin": 2.145511,
+      "calinski_harabasz": 6939.27301,
+      "score": 7.321986
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 4,
+        "linkage": "complete"
+      },
+      "n_clusters": 4,
+      "noise_share": 0.0,
+      "silhouette": 0.206654,
+      "davies_bouldin": 1.933796,
+      "calinski_harabasz": 5542.078939,
+      "score": 9.947745
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 5,
+        "linkage": "complete"
+      },
+      "n_clusters": 5,
+      "noise_share": 0.0,
+      "silhouette": 0.189719,
+      "davies_bouldin": 2.127003,
+      "calinski_harabasz": 4482.507668,
+      "score": 6.110031
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 6,
+        "linkage": "complete"
+      },
+      "n_clusters": 6,
+      "noise_share": 0.0,
+      "silhouette": 0.104266,
+      "davies_bouldin": 2.181639,
+      "calinski_harabasz": 3790.894182,
+      "score": -3.149169
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 7,
+        "linkage": "complete"
+      },
+      "n_clusters": 7,
+      "noise_share": 0.0,
+      "silhouette": 0.099262,
+      "davies_bouldin": 2.075917,
+      "calinski_harabasz": 3622.163118,
+      "score": -2.637867
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 8,
+        "linkage": "complete"
+      },
+      "n_clusters": 8,
+      "noise_share": 0.0,
+      "silhouette": 0.100605,
+      "davies_bouldin": 1.896775,
+      "calinski_harabasz": 3255.629815,
+      "score": -0.818802
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 2,
+        "linkage": "average"
+      },
+      "n_clusters": 2,
+      "noise_share": 0.0,
+      "silhouette": 0.52164,
+      "davies_bouldin": 0.68533,
+      "calinski_harabasz": 11786.954623,
+      "score": 54.685533
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 3,
+        "linkage": "average"
+      },
+      "n_clusters": 3,
+      "noise_share": 0.0,
+      "silhouette": 0.318895,
+      "davies_bouldin": 1.154435,
+      "calinski_harabasz": 5964.98536,
+      "score": 29.03898
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 4,
+        "linkage": "average"
+      },
+      "n_clusters": 4,
+      "noise_share": 0.0,
+      "silhouette": 0.354791,
+      "davies_bouldin": 1.113667,
+      "calinski_harabasz": 7049.365745,
+      "score": 33.203265
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 5,
+        "linkage": "average"
+      },
+      "n_clusters": 5,
+      "noise_share": 0.0,
+      "silhouette": 0.307676,
+      "davies_bouldin": 1.129006,
+      "calinski_harabasz": 5386.094419,
+      "score": 28.069301
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 6,
+        "linkage": "average"
+      },
+      "n_clusters": 6,
+      "noise_share": 0.0,
+      "silhouette": 0.268024,
+      "davies_bouldin": 0.991508,
+      "calinski_harabasz": 4324.127736,
+      "score": 25.259517
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 7,
+        "linkage": "average"
+      },
+      "n_clusters": 7,
+      "noise_share": 0.0,
+      "silhouette": 0.20584,
+      "davies_bouldin": 1.005142,
+      "calinski_harabasz": 3663.78652,
+      "score": 18.739105
+    },
+    {
+      "dataset_key": "dataset_a",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 8,
+        "linkage": "average"
+      },
+      "n_clusters": 8,
+      "noise_share": 0.0,
+      "silhouette": 0.202576,
+      "davies_bouldin": 0.928176,
+      "calinski_harabasz": 3141.257893,
+      "score": 19.028537
+    }
+  ],
+  "dataset_b": [
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 2,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 2,
+      "noise_share": 0.0,
+      "silhouette": 0.306861,
+      "davies_bouldin": 1.323472,
+      "calinski_harabasz": 3573.393333,
+      "score": 25.632931
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 3,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 3,
+      "noise_share": 0.0,
+      "silhouette": 0.270084,
+      "davies_bouldin": 1.225312,
+      "calinski_harabasz": 3082.774289,
+      "score": 22.78919
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 4,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 4,
+      "noise_share": 0.0,
+      "silhouette": 0.251262,
+      "davies_bouldin": 1.300148,
+      "calinski_harabasz": 2915.58777,
+      "score": 20.10289
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 5,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 5,
+      "noise_share": 0.0,
+      "silhouette": 0.252392,
+      "davies_bouldin": 1.21731,
+      "calinski_harabasz": 2704.355372,
+      "score": 20.969089
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 6,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 6,
+      "noise_share": 0.0,
+      "silhouette": 0.25982,
+      "davies_bouldin": 1.159521,
+      "calinski_harabasz": 2571.090931,
+      "score": 22.239264
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 7,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 7,
+      "noise_share": 0.0,
+      "silhouette": 0.248457,
+      "davies_bouldin": 1.192382,
+      "calinski_harabasz": 2472.777089,
+      "score": 20.735381
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.12,
+        "min_samples": 5
+      },
+      "n_clusters": 68,
+      "noise_share": 0.283875,
+      "silhouette": -0.444455,
+      "davies_bouldin": 0.780914,
+      "calinski_harabasz": 69.793031,
+      "score": -47.994879
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.12,
+        "min_samples": 10
+      },
+      "n_clusters": 80,
+      "noise_share": 0.6175,
+      "silhouette": 0.063863,
+      "davies_bouldin": 0.830863,
+      "calinski_harabasz": 460.013701,
+      "score": 4.211098
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.12,
+        "min_samples": 20
+      },
+      "n_clusters": 1,
+      "noise_share": 0.99725,
+      "silhouette": NaN,
+      "davies_bouldin": NaN,
+      "calinski_harabasz": NaN,
+      "score": NaN
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.16,
+        "min_samples": 5
+      },
+      "n_clusters": 20,
+      "noise_share": 0.1475,
+      "silhouette": -0.145609,
+      "davies_bouldin": 0.74578,
+      "calinski_harabasz": 178.014061,
+      "score": -16.831236
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.16,
+        "min_samples": 10
+      },
+      "n_clusters": 10,
+      "noise_share": 0.244,
+      "silhouette": -0.139878,
+      "davies_bouldin": 0.840612,
+      "calinski_harabasz": 393.117762,
+      "score": -16.41727
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.16,
+        "min_samples": 20
+      },
+      "n_clusters": 29,
+      "noise_share": 0.594,
+      "silhouette": -0.019542,
+      "davies_bouldin": 0.905336,
+      "calinski_harabasz": 476.683038,
+      "score": -4.838613
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.2,
+        "min_samples": 5
+      },
+      "n_clusters": 9,
+      "noise_share": 0.102,
+      "silhouette": -0.035651,
+      "davies_bouldin": 0.792408,
+      "calinski_harabasz": 377.857577,
+      "score": -5.55202
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.2,
+        "min_samples": 10
+      },
+      "n_clusters": 5,
+      "noise_share": 0.14725,
+      "silhouette": 0.101366,
+      "davies_bouldin": 0.955093,
+      "calinski_harabasz": 768.579101,
+      "score": 7.231514
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.2,
+        "min_samples": 20
+      },
+      "n_clusters": 5,
+      "noise_share": 0.258125,
+      "silhouette": -0.052066,
+      "davies_bouldin": 1.00715,
+      "calinski_harabasz": 823.6637,
+      "score": -8.563124
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.24,
+        "min_samples": 5
+      },
+      "n_clusters": 6,
+      "noise_share": 0.08375,
+      "silhouette": 0.001015,
+      "davies_bouldin": 0.613058,
+      "calinski_harabasz": 14.583804,
+      "score": -3.282848
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.24,
+        "min_samples": 10
+      },
+      "n_clusters": 3,
+      "noise_share": 0.10825,
+      "silhouette": 0.182961,
+      "davies_bouldin": 1.19458,
+      "calinski_harabasz": 1416.002721,
+      "score": 13.606599
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.24,
+        "min_samples": 20
+      },
+      "n_clusters": 2,
+      "noise_share": 0.171625,
+      "silhouette": 0.274476,
+      "davies_bouldin": 1.403473,
+      "calinski_harabasz": 3058.078952,
+      "score": 21.438739
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.3,
+        "min_samples": 5
+      },
+      "n_clusters": 5,
+      "noise_share": 0.072375,
+      "silhouette": 0.085225,
+      "davies_bouldin": 0.589699,
+      "calinski_harabasz": 21.951657,
+      "score": 5.7589
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.3,
+        "min_samples": 10
+      },
+      "n_clusters": 1,
+      "noise_share": 0.085875,
+      "silhouette": NaN,
+      "davies_bouldin": NaN,
+      "calinski_harabasz": NaN,
+      "score": NaN
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.3,
+        "min_samples": 20
+      },
+      "n_clusters": 2,
+      "noise_share": 0.115125,
+      "silhouette": 0.258474,
+      "davies_bouldin": 1.484231,
+      "calinski_harabasz": 2879.360037,
+      "score": 18.970761
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.38,
+        "min_samples": 5
+      },
+      "n_clusters": 5,
+      "noise_share": 0.064875,
+      "silhouette": 0.256105,
+      "davies_bouldin": 0.579595,
+      "calinski_harabasz": 30.259989,
+      "score": 23.256889
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.38,
+        "min_samples": 10
+      },
+      "n_clusters": 1,
+      "noise_share": 0.072375,
+      "silhouette": NaN,
+      "davies_bouldin": NaN,
+      "calinski_harabasz": NaN,
+      "score": NaN
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.38,
+        "min_samples": 20
+      },
+      "n_clusters": 1,
+      "noise_share": 0.08375,
+      "silhouette": NaN,
+      "davies_bouldin": NaN,
+      "calinski_harabasz": NaN,
+      "score": NaN
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.48,
+        "min_samples": 5
+      },
+      "n_clusters": 15,
+      "noise_share": 0.047375,
+      "silhouette": -0.103987,
+      "davies_bouldin": 0.747064,
+      "calinski_harabasz": 40.998737,
+      "score": -14.1317
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.48,
+        "min_samples": 10
+      },
+      "n_clusters": 2,
+      "noise_share": 0.064625,
+      "silhouette": 0.262371,
+      "davies_bouldin": 0.715284,
+      "calinski_harabasz": 24.799642,
+      "score": 22.334621
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.48,
+        "min_samples": 20
+      },
+      "n_clusters": 1,
+      "noise_share": 0.070125,
+      "silhouette": NaN,
+      "davies_bouldin": NaN,
+      "calinski_harabasz": NaN,
+      "score": NaN
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.6,
+        "min_samples": 5
+      },
+      "n_clusters": 12,
+      "noise_share": 0.022625,
+      "silhouette": 0.138189,
+      "davies_bouldin": 0.90197,
+      "calinski_harabasz": 69.331686,
+      "score": 9.052422
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.6,
+        "min_samples": 10
+      },
+      "n_clusters": 4,
+      "noise_share": 0.054625,
+      "silhouette": 0.247896,
+      "davies_bouldin": 0.660756,
+      "calinski_harabasz": 70.877078,
+      "score": 22.456997
+    },
+    {
+      "dataset_key": "dataset_b",
+      "algorithm": "DBSCAN",
+      "params": {
+        "eps": 0.6,
+        "min_samples": 20
+      },
+      "n_clusters": 1,
+      "noise_share": 0.062375,
+      "silhouette": NaN,
+      "davies_bouldin": NaN,
+      "calinski_harabasz": NaN,
+      "score": NaN
+    }
+  ],
+  "dataset_c": [
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 2,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 2,
+      "noise_share": 0.0,
+      "silhouette": 0.255503,
+      "davies_bouldin": 1.635731,
+      "calinski_harabasz": 3126.328083,
+      "score": 17.240924
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 3,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 3,
+      "noise_share": 0.0,
+      "silhouette": 0.294128,
+      "davies_bouldin": 1.46664,
+      "calinski_harabasz": 3355.13673,
+      "score": 22.864946
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 4,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 4,
+      "noise_share": 0.0,
+      "silhouette": 0.374888,
+      "davies_bouldin": 1.164396,
+      "calinski_harabasz": 3907.022658,
+      "score": 34.115627
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 5,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 5,
+      "noise_share": 0.0,
+      "silhouette": 0.447369,
+      "davies_bouldin": 0.975904,
+      "calinski_harabasz": 5087.688517,
+      "score": 43.512635
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 6,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 6,
+      "noise_share": 0.0,
+      "silhouette": 0.423134,
+      "davies_bouldin": 1.009677,
+      "calinski_harabasz": 5371.618125,
+      "score": 40.805701
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "KMeans",
+      "params": {
+        "k": 7,
+        "n_init": 20,
+        "random_state": 42
+      },
+      "n_clusters": 7,
+      "noise_share": 0.0,
+      "silhouette": 0.382855,
+      "davies_bouldin": 1.655773,
+      "calinski_harabasz": 4567.399002,
+      "score": 30.154688
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 2,
+        "linkage": "ward"
+      },
+      "n_clusters": 2,
+      "noise_share": 0.0,
+      "silhouette": 0.255503,
+      "davies_bouldin": 1.635731,
+      "calinski_harabasz": 3126.328083,
+      "score": 17.240924
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 3,
+        "linkage": "ward"
+      },
+      "n_clusters": 3,
+      "noise_share": 0.0,
+      "silhouette": 0.294128,
+      "davies_bouldin": 1.46664,
+      "calinski_harabasz": 3355.13673,
+      "score": 22.864946
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 4,
+        "linkage": "ward"
+      },
+      "n_clusters": 4,
+      "noise_share": 0.0,
+      "silhouette": 0.374888,
+      "davies_bouldin": 1.164396,
+      "calinski_harabasz": 3907.022658,
+      "score": 34.115627
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 5,
+        "linkage": "ward"
+      },
+      "n_clusters": 5,
+      "noise_share": 0.0,
+      "silhouette": 0.447369,
+      "davies_bouldin": 0.975904,
+      "calinski_harabasz": 5087.688517,
+      "score": 43.512635
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 6,
+        "linkage": "ward"
+      },
+      "n_clusters": 6,
+      "noise_share": 0.0,
+      "silhouette": 0.423134,
+      "davies_bouldin": 1.009677,
+      "calinski_harabasz": 5371.618125,
+      "score": 40.805701
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 7,
+        "linkage": "ward"
+      },
+      "n_clusters": 7,
+      "noise_share": 0.0,
+      "silhouette": 0.364332,
+      "davies_bouldin": 1.843482,
+      "calinski_harabasz": 4527.838998,
+      "score": 26.416601
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 2,
+        "linkage": "complete"
+      },
+      "n_clusters": 2,
+      "noise_share": 0.0,
+      "silhouette": 0.255503,
+      "davies_bouldin": 1.635731,
+      "calinski_harabasz": 3126.328083,
+      "score": 17.240924
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 3,
+        "linkage": "complete"
+      },
+      "n_clusters": 3,
+      "noise_share": 0.0,
+      "silhouette": 0.294128,
+      "davies_bouldin": 1.46664,
+      "calinski_harabasz": 3355.13673,
+      "score": 22.864946
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 4,
+        "linkage": "complete"
+      },
+      "n_clusters": 4,
+      "noise_share": 0.0,
+      "silhouette": 0.364593,
+      "davies_bouldin": 1.255711,
+      "calinski_harabasz": 3796.040536,
+      "score": 32.144167
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 5,
+        "linkage": "complete"
+      },
+      "n_clusters": 5,
+      "noise_share": 0.0,
+      "silhouette": 0.447369,
+      "davies_bouldin": 0.975904,
+      "calinski_harabasz": 5087.688517,
+      "score": 43.512635
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 6,
+        "linkage": "complete"
+      },
+      "n_clusters": 6,
+      "noise_share": 0.0,
+      "silhouette": 0.423134,
+      "davies_bouldin": 1.009677,
+      "calinski_harabasz": 5371.618125,
+      "score": 40.805701
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 7,
+        "linkage": "complete"
+      },
+      "n_clusters": 7,
+      "noise_share": 0.0,
+      "silhouette": 0.374794,
+      "davies_bouldin": 2.539593,
+      "calinski_harabasz": 4502.425328,
+      "score": 20.496064
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 2,
+        "linkage": "average"
+      },
+      "n_clusters": 2,
+      "noise_share": 0.0,
+      "silhouette": 0.255503,
+      "davies_bouldin": 1.635731,
+      "calinski_harabasz": 3126.328083,
+      "score": 17.240924
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 3,
+        "linkage": "average"
+      },
+      "n_clusters": 3,
+      "noise_share": 0.0,
+      "silhouette": 0.306091,
+      "davies_bouldin": 1.434369,
+      "calinski_harabasz": 3303.379822,
+      "score": 24.368414
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 4,
+        "linkage": "average"
+      },
+      "n_clusters": 4,
+      "noise_share": 0.0,
+      "silhouette": 0.372104,
+      "davies_bouldin": 1.119144,
+      "calinski_harabasz": 3739.606741,
+      "score": 34.245963
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 5,
+        "linkage": "average"
+      },
+      "n_clusters": 5,
+      "noise_share": 0.0,
+      "silhouette": 0.447369,
+      "davies_bouldin": 0.975904,
+      "calinski_harabasz": 5087.688517,
+      "score": 43.512635
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 6,
+        "linkage": "average"
+      },
+      "n_clusters": 6,
+      "noise_share": 0.0,
+      "silhouette": 0.423797,
+      "davies_bouldin": 0.900534,
+      "calinski_harabasz": 4071.625779,
+      "score": 41.686403
+    },
+    {
+      "dataset_key": "dataset_c",
+      "algorithm": "Agglomerative",
+      "params": {
+        "k": 7,
+        "linkage": "average"
+      },
+      "n_clusters": 7,
+      "noise_share": 0.0,
+      "silhouette": 0.409146,
+      "davies_bouldin": 0.940288,
+      "calinski_harabasz": 4478.214099,
+      "score": 39.918923
+    }
+  ]
+}
