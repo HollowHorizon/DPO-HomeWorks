@@ -2,6 +2,21 @@
   "dataset": "CIFAR10",
   "seed": 42,
   "device": "cpu",
+  "hidden_sizes": [
+    256,
+    128
+  ],
+  "dropout": 0.0,
+  "batch_norm": true,
+  "activation": "ReLU",
+  "optimizer": "adam",
+  "lr": 0.001,
+  "momentum": 0.0,
+  "weight_decay": 0.0,
+  "batch_size": 1024,
+  "max_epochs": 8,
+  "patience": 3,
+  "early_stopping": true,
   "architecture": {
     "hidden_sizes": [
       256,
