@@ -1,0 +1,7 @@
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,STL10,42,simple-cnn-base,Adam,0.001,10.0,0.486,,,,,Best val acc: 0.4860
+C2,classification,STL10,42,simple-cnn-aug,Adam,0.001,10.0,0.507,,,,,Best val acc: 0.5070
+C3,classification,STL10,42,resnet-head,Adam,0.001,10.0,0.94,,,,,Best val acc: 0.9400
+C4,classification,STL10,42,resnet-finetune,Adam,0.0001,10.0,0.957,0.9461,,,,Best val acc: 0.9570
+V1,detection,Pascal VOC,42,FasterRCNN_ResNet50_FPN,,,,,,0.2784,0.945,0.8041,Score threshold 0.3
+V2,detection,Pascal VOC,42,FasterRCNN_ResNet50_FPN,,,,,,0.5488,0.8257,0.8171,Score threshold 0.7

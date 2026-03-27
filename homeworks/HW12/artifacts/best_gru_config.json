@@ -1,0 +1,1 @@
+{"hidden_size": 64, "window_size": 24, "lr": 0.001, "optimizer": "Adam"}
