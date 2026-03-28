@@ -1,1 +1,11 @@
-{"hidden_size": 64, "window_size": 24, "lr": 0.001, "optimizer": "Adam"}
+{
+    "experiment_id": "R1",
+    "window_size": 24,
+    "hidden_size": 64,
+    "lr": 0.001,
+    "seed": 42,
+    "scaler": "StandardScaler",
+    "optimizer": "Adam",
+    "epochs": 50,
+    "normalization_range": "mean=0, std=1"
+}

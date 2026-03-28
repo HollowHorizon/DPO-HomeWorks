@@ -1,5 +1,5 @@
-experiment_id,best_val_mae,best_val_rmse,best_val_mape,notes,test_mae
-B1,6.207291666666666,7.868384508176918,0.04137341974383069,Naive Last Value,
-B2,12.699953703703704,15.081186824689702,0.08646054408922926,Moving Average Window 7,
-B3,5.610706964460553,7.124124826937583,0.03706682049288616,Ridge on Lag Features,
-R1,4.39014700979364,5.66387133021455,0.029032404150526735,GRU Forecast,4.789860487615805
+experiment_id,task,dataset,seed,split_summary,window_size,horizon,model_summary,features_summary,scaler,optimizer,lr,epochs_trained,best_val_mae,best_val_rmse,best_val_mape,test_mae,test_rmse,test_mape,notes
+B1,forecasting,S12-hw-dataset.csv,42,"train:3456, val:432, test:432",N/A,1,Naive Last Value,target_only,None,N/A,N/A,0,6.207291666666666,7.868384508176918,0.04137341974383069,,,,Naive Last Value
+B2,forecasting,S12-hw-dataset.csv,42,"train:3456, val:432, test:432",N/A,1,Moving Average Window 7,target_only,None,N/A,N/A,0,12.699953703703704,15.081186824689702,0.08646054408922926,,,,Moving Average Window 7
+B3,forecasting,S12-hw-dataset.csv,42,"train:3456, val:432, test:432",N/A,1,Ridge Regression,"lags[1,7,14], rolling[7], calendar",StandardScaler (fitted on train only),N/A,N/A,0,5.610706964460553,7.124124826937583,0.03706682049288616,,,,Ridge Regression
+R1,forecasting,S12-hw-dataset.csv,42,"train:3456, val:432, test:432",24,1,GRU Forecast,"lags[1,7,14], rolling[7], calendar",StandardScaler (fitted on train only),Adam,0.001,50,4.320916175842285,5.517103477925062,0.028538743034005165,4.695662975311279,5.985869616922907,0.03074835240840912,GRU Forecast
