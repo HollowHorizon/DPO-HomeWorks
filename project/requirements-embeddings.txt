@@ -1,0 +1,4 @@
+-r requirements.txt
+# Optional: нужен только для режима retrieval.use_embeddings=true.
+# Если pip снова пытается собирать torch/numpy из исходников, не ставь этот файл.
+sentence-transformers>=3.3,<4.0

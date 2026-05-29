@@ -1,0 +1,20 @@
+paths:
+  notes_dir: data/notes
+  chunks_path: data/processed/chunks.csv
+  qrels_path: data/qrels.csv
+  artifacts_dir: artifacts
+  reports_dir: reports
+
+chunking:
+  max_chars: 700
+  overlap_chars: 120
+
+retrieval:
+  top_k: 5
+  embedding_model_name: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  use_embeddings: false
+
+classifier:
+  min_positive_score: 0.55
+  random_state: 42
+  test_size: 0.25

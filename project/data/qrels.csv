@@ -1,0 +1,27 @@
+query,doc_id,label
+Как сделать health check в FastAPI?,fastapi.md,1
+Как сделать health check в FastAPI?,docker.md,0
+Как запустить FastAPI через uvicorn?,fastapi.md,1
+Как запустить FastAPI через uvicorn?,ml_metrics.md,0
+Как написать Dockerfile для сервиса?,docker.md,1
+Как написать Dockerfile для сервиса?,rag.md,0
+Что такое RAG?,rag.md,1
+Что такое RAG?,logging.md,0
+Какие метрики использовать для поиска?,ml_metrics.md,1
+Какие метрики использовать для поиска?,docker.md,0
+Что такое Precision@K и MRR?,ml_metrics.md,1
+Что такое Precision@K и MRR?,tts_pipeline.md,0
+Как изолировать Kotlin зависимости?,kotlin_classloader.md,1
+Как изолировать Kotlin зависимости?,fastapi.md,0
+Зачем нужен bridge модуль при ClassLoader isolation?,kotlin_classloader.md,1
+Зачем нужен bridge модуль при ClassLoader isolation?,eda.md,0
+Как устроен пайплайн TTS аудиокниги?,tts_pipeline.md,1
+Как устроен пайплайн TTS аудиокниги?,docker.md,0
+Что делать при ошибке генерации аудио?,tts_pipeline.md,1
+Что делать при ошибке генерации аудио?,rag.md,0
+Что смотреть в EDA для текстов?,eda.md,1
+Что смотреть в EDA для текстов?,kotlin_classloader.md,0
+Какие логи нужны для сервиса?,logging.md,1
+Какие логи нужны для сервиса?,ml_metrics.md,0
+Как проверить что модель загружена?,logging.md,1
+Как проверить что модель загружена?,fastapi.md,1
